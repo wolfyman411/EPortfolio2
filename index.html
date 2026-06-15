@@ -6,6 +6,17 @@
     <title>Eli Huffman</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/00f18cf7ad.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "OIAcwsHQrAdncjmB6",
+        });
+    })();
+    </script>
 </head>
 <body>
     <section id="landing-page">
@@ -18,11 +29,11 @@
                 <li class="nav__link">
                     <a href="#projects" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">Contact</a>
                 </li>
-                <li class="nav__link">
-                    <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black"><i class="fas fa-adjust"></i></a>
+                <li class="nav__link" onclick="toggleContrast()">
+                    <a class="click nav__link--anchor link__hover link__hover-effect link__hover-effect--black"><i class="fas fa-adjust"></i></a>
                 </li>
             </ul>
         </nav>
@@ -32,7 +43,7 @@
                 <h1 class="title primary">I'm Eli.</h1>
                 <p class="header__para">I'm a <b class="primary">Frontend Software Engineer</b> that loves the creative process. I enjoy working with users to make their dream web applications, and build great user experiences.
                     <br>
-                    Here's a bit more <b><a class="primary click" href="#about">about me</a></b>.
+                    Here's a bit more <b onclick="toggleModal()"><a class="primary click" href="#about">about me</a></b>.
                 </p>
                 <div class="socials">
                     <a href="#" class="social click">
@@ -47,7 +58,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -100,7 +111,7 @@
             <div class="modal__half modal__contact">
                 <h3 class="modal__title">Let's have a chat!</h3>
                 <h4 class="modal__subtitle">I'm currently open to new opportunities.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
                         <input class="input" name="user_name" type="text" required>
@@ -111,7 +122,7 @@
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea required></textarea>
+                        <textarea name="message" required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send The Message</button>
                 </form>
@@ -121,7 +132,7 @@
                 <div class="modal__overlay modal__overlay--success">
                     Message Sent!
                 </div>
-                <i class="fas fa-times modal__exit click"></i>
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
             </div>
         </div>
     </section>
