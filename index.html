@@ -16,12 +16,14 @@
                     <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">Projects</a>
+                    <a href="#projects" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
                 <li class="nav__link">
                     <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black">Contact</a>
                 </li>
-                <i class="fas fa-adjust click"></i>
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor link__hover link__hover-effect link__hover-effect--black"><i class="fas fa-adjust"></i></a>
+                </li>
             </ul>
         </nav>
         <header class="header">
@@ -30,7 +32,7 @@
                 <h1 class="title primary">I'm Eli.</h1>
                 <p class="header__para">I'm a <b class="primary">Frontend Software Engineer</b> that loves the creative process. I enjoy working with users to make their dream web applications, and build great user experiences.
                     <br>
-                    Here's a bit more <b class="primary">about me</b>.
+                    Here's a bit more <b><a class="primary click" href="#about">about me</a></b>.
                 </p>
                 <div class="socials">
                     <a href="#" class="social click">
@@ -51,6 +53,77 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon" click></div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle">Frontend Software Engineer</h4>
+                <p class="modal__para">
+                    I'm a 23 year-old <b class="primary">frontend software engineer</b> that loves working with clients to create great <b class="primary">user experiences.</b>
+                    <br>
+                    I currently lead a team of <b class="primary">talented</b> and <b class="primary">experienced</b> developers, as well as <b class="primary">marketing</b> and <b class="primary">selling</b> my own software to a wide consumer base every day.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.worldvectorlogo.com/logos/css-3.svg">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html-1.svg">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://static.cdnlogo.com/logos/j/69/javascript.svg">
+                        <span class="language__name">Javascript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png">
+                        <span class="language__name">React</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png">
+                        <span class="language__name">Java</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png">
+                        <span class="language__name">Python</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png">
+                        <span class="language__name">C#</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png">
+                        <span class="language__name">C++</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title">Let's have a chat!</h3>
+                <h4 class="modal__subtitle">I'm currently open to new opportunities.</h4>
+                <form id="contact__form" action="">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send The Message</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Message Sent!
+                </div>
+                <i class="fas fa-times modal__exit click"></i>
+            </div>
+        </div>
     </section>
     <section id="projects">
         <div class="container">
@@ -143,10 +216,10 @@
             <div class="row">
                 <div class="footer_name">Eli Huffman</div>
                 <div class="footer__socials">
-                    <a href="#" class="footer__social hover-effect hover-effect--white">Github</a>
-                    <a href="#" class="footer__social hover-effect hover-effect--white">LinkedIn</a>
-                    <a href="#" class="footer__social hover-effect hover-effect--white">Contact</a>
-                    <a href="#" class="footer__social hover-effect hover-effect--white">Resume</a>
+                    <a href="#" class="footer__social link__hover-effect link__hover-effect--white">Github</a>
+                    <a href="#" class="footer__social link__hover-effect link__hover-effect--white">LinkedIn</a>
+                    <a href="#" class="footer__social link__hover-effect link__hover-effect--white">Contact</a>
+                    <a href="#" class="footer__social link__hover-effect link__hover-effect--white">Resume</a>
                 </div>
             </div>
         </div>
